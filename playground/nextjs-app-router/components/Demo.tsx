@@ -6,6 +6,7 @@ import { SwapConfig } from '@/components/form/swap-config';
 import { WalletType } from '@/components/form/wallet-type';
 import { useContext, useEffect, useState } from 'react';
 import IdentityDemo from './demo/Identity';
+import PayDemo from './demo/Pay';
 import SwapDemo from './demo/Swap';
 import TransactionDemo from './demo/Transaction';
 import WalletDemo from './demo/Wallet';
@@ -81,6 +82,8 @@ function Demo() {
             <SwapDemo />
           ) : activeComponent === OnchainKitComponent.Wallet ? (
             <WalletDemo />
+          ) : activeComponent === OnchainKitComponent.Pay ? (
+            <PayDemo />
           ) : (
             <></>
           )}
