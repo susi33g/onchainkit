@@ -9,6 +9,7 @@ import IdentityDemo from './demo/Identity';
 import SwapDemo from './demo/Swap';
 import TransactionDemo from './demo/Transaction';
 import WalletDemo from './demo/Wallet';
+import WalletDefaultDemo from './demo/WalletDefault';
 import { ActiveComponent } from './form/active-component';
 import { TransactionOptions } from './form/transaction-options';
 
@@ -81,6 +82,8 @@ function Demo() {
             <SwapDemo />
           ) : activeComponent === OnchainKitComponent.Wallet ? (
             <WalletDemo />
+          ) : activeComponent === OnchainKitComponent.WalletDefault ? (
+            <WalletDefaultDemo />
           ) : (
             <></>
           )}
